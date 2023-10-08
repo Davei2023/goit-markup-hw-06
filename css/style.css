@@ -45,6 +45,9 @@ display: block;
 }
 
 .header {
+  margin: 0 auto;
+text-align: center;
+max-width:320px ;
 border-bottom: 1px solid var(--color-imag);
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -60,9 +63,9 @@ margin-left: auto;
 
 .tabl-nav {
 display: flex;
-margin-right:auto;
 align-items: center;
-
+padding-top: 18px;
+padding-bottom: 18px;
 }
 
 .header-menu {
@@ -77,8 +80,11 @@ display: none;
 }
 
 .header-container {
+max-width: 320px;
 display: flex;
 align-items: center;
+margin: 0 auto;
+gap: 32px;
 }
 
 .socials-info {
@@ -171,6 +177,19 @@ color: var(--color-stile);
 font-style: normal;
 }
   
+.mobile-button-new{
+border-radius: 50%;
+min-width: 24px;
+min-height: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #FFF;
+border: none;
+padding: 0;
+cursor: pointer;
+}
+
 /*effective-section*/
   
 .effective-section {
@@ -188,7 +207,44 @@ margin: 0 auto;
 background-image: 
 linear-gradient(rgba(46, 47, 66, 0.7), 
 rgba(46, 47, 66, 0.7)), 
-url(../images/hiro/Dark-bg_mob-min.jpg);
+url(../images/hiro/Dark-bg-mobil-min.jpg);
+}
+/* mobile screen */
+@media only screen and(min-resolution: 192dpi){
+  .effective-section{
+    background-image: 
+linear-gradient(rgba(46, 47, 66, 0.7), 
+rgba(46, 47, 66, 0.7)), 
+url(../images/hiro/Dark-bg-mobil@2x-min.jpg)
+  }
+}
+/* tablet screen */
+@media only screen and (min-width:768px){
+  .effective-section{
+    max-width: 1158px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hiro/Dark-bg-tablet-min.jpg);
+  }
+}
+
+@media only screan and (min-width:768px) and (min-resolution: 192dpi){
+  .effective-section{
+    max-width: 1158px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hiro/Dark-bg-tablet-min.jpg);
+  }
+}
+/* descktop screen */
+@media only screen and (min-width:1158px){
+  .effective-section{
+    max-width: 1440px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.8), rgba(46, 47, 66, 0.8)), url(../images/hiro/Dark-bg-pcversion-min.jpg);
+  }
+}
+
+@media only screen and (min-width:1158px) and (min-resolution: 192dpi){
+  .effective-section{
+    max-width: 1440px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.8), rgba(46, 47, 66, 0.8)), url(../images/hiro/Dark-bg-pcversion-min.jpg);
+  }
 }
 
 .hiro-title {
@@ -292,6 +348,8 @@ margin-bottom: 8px;
 }
   
 .blank-non {
+padding-left:15px ;
+max-width: 288px;
 color: var(--color-set);
 font-size: 16px;
 line-height: 1.5;
@@ -497,7 +555,9 @@ fill: #F4F4FD;
   /*footer*/
   
   .footer {
-    width:100%;
+    margin: 0 auto;
+    display: block;
+    max-width: 320px;
     background-color: var(--color-prymary);
     padding: 100px 0
   }
@@ -905,7 +965,12 @@ fill: #F4F4FD;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .menu-container{
+  .menu-mobile-container {
+    max-width: 320px;
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    color: #2E2F42;
     position: fixed;
     padding: 72px 24px 40px 16px;
     top:0;
@@ -913,60 +978,114 @@ fill: #F4F4FD;
     width: 100%;
     height: 100%;
     background-color: #FFF;
+    transition: tranform 150ms more;
+  }
+
+  .menu-mobile-container.is-open {
+    transform: translateX(0);
   }
 
   .mobile-btn{
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  min-width: 24px;
+  min-height:24px;
+  border-radius: 50%;
+  background-color: #E7E9FC;
+  border: 1px solid var(--color-light-slate) ;
+  padding: 0;
   }
 
-  .mobile-menu-icon{
-
+  .mobile-btn:hover{
+    background-color: var(--color-stile);
+    border: none;
+    fill: var(--color-non);
   }
 
   .mobile-menu-list{
+  margin-bottom: auto ;
+  }
 
+  .mobile-menu-item:not(:last-child) {
+    margin-bottom: 40px;
   }
 
   .mobile-menu-link{
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+  }
 
+  .mobile-menu-link.current{
+    color: #404BBF;
   }
 
   .mobile-contacts{
-   
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    padding-bottom: 40px;
   }
 
-  .mobilecontacts-item{
-
+  .mobile-contacts-link.acent {
+    color:#4D5AE5;
   }
 
   .mobile-contacts-link{
-
+    color: #2E2F42;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
   }
 
-  .mobile-socials{
-
+  .foter-mobil{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .mobile-socials-item{
-
-  }
-
-  .mobile-socials-link{
-
-  }
-
-  .mobile-socials-icon{
-
-  }
+  @media only screen and (min-width:324.98px){
+    .menu-mobile-container{
+    display: none;
+    }
+    }
+  
 /* tel */
 
   /* tablet */
 @media screen and (min-width: 768px) {
   .container {
   max-width: 768px;
-  padding-left: 16px;
-  padding-right: 16px;
   }
+
+.header-container{
+  display: block;
+  margin: 0 auto;
+  max-width: 768px;
+  display: flex;
+  align-items: center;
+}
+
+.header{
+max-width: 768px;
+margin: 0 auto;
+text-align: center;
+display: block;
+}
+
+.mobile-button-new{
+  display: none;
+}
 
 .nav-link{
 margin-right: 120px;
@@ -980,17 +1099,17 @@ letter-spacing: 0.54px;
 text-transform: uppercase;
 }
 
+
 .effective-section{
 width: 100%;
 margin: 0 auto;
 background-color: #2E2F42;
 padding-top: 112px;
 padding-bottom: 112px;
-background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg_tab.jpg);
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-max-width: 1439px;
+max-width: 1440px;
 padding-left: 0;
 padding-right: 0;
 }
@@ -1052,7 +1171,8 @@ padding: 16px;
 }
 
 .footer{
-  width:100%;
+  min-width: 768px;
+  max-width: 1024px;
 }
 .dok-startegy{
   text-align: left;
@@ -1202,12 +1322,25 @@ padding: 16px;
     text-align: left;
   }
 
-    }
+  .menu-mobile-container{
+    display: none;
+  }
+  }
 @media screen and (min-width: 1158px) {
 .container {
   max-width: 1440px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.header{
+  max-width: 1440px;
+  max-width: 1158px;
+  margin: 0 auto;
+}
+
+.mobile-button-new{
+  display: none;
 }
 
 .tabl-nav {
@@ -1322,11 +1455,7 @@ gap: 40px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat ;
-    margin: 0 auto;
-    background-image: 
-    linear-gradient(rgba(46, 47, 66, 0.7), 
-    rgba(46, 47, 66, 0.7)), 
-    url(../images/fonicons.jpg);
+    margin: 0 auto; 
   }
 
   .hiro-title {
@@ -1422,6 +1551,7 @@ gap: 40px;
   }
   
   .blank-non {
+    margin: 0 auto;
     color: var(--color-set);
     font-size: 16px;
     line-height: 1.5;
@@ -1627,6 +1757,9 @@ gap: 40px;
   }
 
   .footer {
+    margin: 0 auto;
+    min-width: 1158px;
+    max-width: 1440px;
     background-color: var(--color-prymary);
     padding: 100px 0
   }
@@ -2009,5 +2142,9 @@ gap: 40px;
     border: none;
     border-radius: 4px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu-mobile-container{
+    display: none;
   }
 }
