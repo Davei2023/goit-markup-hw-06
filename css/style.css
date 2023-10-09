@@ -746,7 +746,7 @@ fill: #F4F4FD;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 408px;
+    width: 288px;
      min-height: 584px;
     background: var(--color-dairy);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1030,7 +1030,11 @@ fill: #F4F4FD;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.4px;
-    padding-bottom: 40px;
+    padding-bottom: 24px;
+  }
+
+  .mobele-contaks-clon{
+    gap: 48px;
   }
 
   .mobile-contacts-link.acent {
@@ -1340,6 +1344,10 @@ padding: 16px;
 
   .menu-mobile-container{
     display: none;
+  }
+
+  .modal{
+  width: 408px;
   }
   }
 @media screen and (min-width: 1158px) {
