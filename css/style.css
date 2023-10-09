@@ -53,7 +53,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .container {
-max-width: 375px;
+max-width: 320px;
 padding-left: 16px;
 padding-right: 16px;
 margin-right: auto;
@@ -1034,7 +1034,7 @@ fill: #F4F4FD;
   }
 
   .mobele-contaks-clon{
-    gap: 48px;
+    margin-bottom: 48px;
   }
 
   .mobile-contacts-link.acent {
