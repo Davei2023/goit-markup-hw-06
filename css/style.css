@@ -45,7 +45,7 @@ display: block;
 }
 
 .header {
-  margin: 0 auto;
+margin: 0 auto;
 text-align: center;
 max-width:320px ;
 border-bottom: 1px solid var(--color-imag);
@@ -53,19 +53,15 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 
 .container {
-min-width: 320px;
 max-width: 375px;
-padding-left: 15px;
-padding-right: 15px;
+padding-left: 16px;
+padding-right: 16px;
 margin-right: auto;
 margin-left: auto;
 }
 
 .tabl-nav {
-display: flex;
-align-items: center;
-padding-top: 18px;
-padding-bottom: 18px;
+display:block;
 }
 
 .header-menu {
@@ -80,11 +76,10 @@ display: none;
 }
 
 .header-container {
-max-width: 320px;
-display: flex;
-align-items: center;
-margin: 0 auto;
-gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px;
 }
 
 .socials-info {
@@ -106,8 +101,7 @@ letter-spacing: 0.03em;
 font-weight: 700;
 line-height: 1.17;
 text-transform: uppercase;
-font-size: 18px;
-margin-right: 76px;  
+font-size: 18px; 
 }
 
 .link-studio::after {
@@ -193,17 +187,19 @@ cursor: pointer;
 /*effective-section*/
   
 .effective-section {
-width: 320px;
+height: 432px;
+max-width: 320px;
 font-size: 56px;
 letter-spacing: 0.02em;
 text-align: center;
+align-items: center;
 line-height: 1.07;
-padding: 188px 0 ;
-max-width: 1440px;
+padding: 72px 0;
 background-size: cover;
 background-position: center;
 background-repeat: no-repeat ;
 margin: 0 auto;
+min-width: 320px;
 background-image: 
 linear-gradient(rgba(46, 47, 66, 0.7), 
 rgba(46, 47, 66, 0.7)), 
@@ -289,6 +285,8 @@ background-color: var(--color-stile);
 /*advantages-section*/
   
 .advantages-section {
+display: block;
+min-width:320px ;
 color: var(--color-prymary);
 font-size: 0.02em;
 padding: 96px 0;
@@ -310,7 +308,7 @@ overflow: hidden;
   
 .advantages-list{
 display: flex;
-gap: 24px;
+gap: 72px;
 flex-wrap: wrap;
 }
 
@@ -348,7 +346,6 @@ margin-bottom: 8px;
 }
   
 .blank-non {
-padding-left:15px ;
 max-width: 288px;
 color: var(--color-set);
 font-size: 16px;
@@ -477,11 +474,12 @@ fill: #F4F4FD;
   
   .portfolio-info {
     display: flex;
-    row-gap: 48px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 48px;
   }
 
   .image-portfolio {
+    max-width: 100%;
     width: calc(100%);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -491,12 +489,12 @@ fill: #F4F4FD;
   }
   
   .portfolio-item {
+    width: 100%;
     padding: 32px 16px;
-    border: 1px solid var(--color-imag);
-    border-top: none;
   }
 
   .foto-blok {
+    width: 100%;
     position: relative;
     overflow: hidden;
   }
@@ -1054,7 +1052,7 @@ fill: #F4F4FD;
     align-items: center;
   }
 
-  @media only screen and (min-width:324.98px){
+  @media only screen and (min-width:320px){
     .menu-mobile-container{
     display: none;
     }
@@ -1065,7 +1063,10 @@ fill: #F4F4FD;
   /* tablet */
 @media screen and (min-width: 768px) {
   .container {
+  padding-left: 15px;
+  padding-right: 15px;
   max-width: 768px;
+  margin: 0 auto;
   }
 
 .header-container{
@@ -1081,6 +1082,13 @@ max-width: 768px;
 margin: 0 auto;
 text-align: center;
 display: block;
+}
+
+.tabl-nav{
+display: flex;
+justify-content: space-between;
+gap: 76px;
+align-items: center;
 }
 
 .mobile-button-new{
@@ -1179,7 +1187,7 @@ padding: 16px;
 }
 
 .tabl-list{
-  width: 356px;
+ width: calc((100% - 24px) / 2);
 }
 
 .femely-clas {
@@ -1225,15 +1233,23 @@ padding: 16px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.advantages-list{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 24px;
+}
 
 .image-portfolio{
-  width: calc((100% - 24px) / 2);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  flex-basis: calc((100% - 24px) / 2);
+  margin-bottom: 0;
 }
 
 .portfolio-info{
-  gap: 24px;
-  row-gap: 48px;                                                                                                                      
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  gap: 72px 24px;                                                                                                                    
 }
 
 .ourportfolio-section{
@@ -1328,13 +1344,13 @@ padding: 16px;
   }
 @media screen and (min-width: 1158px) {
 .container {
-  max-width: 1440px;
-  padding: 0 15px;
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
 .header{
-  max-width: 1440px;
   max-width: 1158px;
   margin: 0 auto;
 }
@@ -1451,7 +1467,7 @@ gap: 40px;
     text-align: center;
     line-height: 1.07;
     padding: 188px 0 ;
-    max-width: 1440px;
+    max-width: 1158;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat ;
@@ -1520,7 +1536,9 @@ gap: 40px;
   
   .advantages-list{
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 
   .tabl-list {
@@ -1675,10 +1693,10 @@ gap: 40px;
   }
   
   .portfolio-info {
-    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    flex-wrap: wrap;
   }
 
   .portfolio-item {
@@ -1689,7 +1707,7 @@ gap: 40px;
   }
 
   .image-portfolio {
-  width: calc((100% - 48px) / 3);
+  flex-basis: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
    
@@ -1703,8 +1721,6 @@ gap: 40px;
   }
 
   .image-tabl {
-    display: block;
-    max-width: 100%;
     height: auto;
     box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
